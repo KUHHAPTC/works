@@ -43,7 +43,7 @@ def count_list(safe_list):
 
     func_max = count.index(max(count))
 
-    print(f"Amount of right symbols is: {count[func_max]}")
+    print(f"Amount of right symbols is: {count[func_max]}/{len(dummy)}")
 
     for i in count:
         if i == count[func_max]:
