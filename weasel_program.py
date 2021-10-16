@@ -1,23 +1,15 @@
-"""
-Реализация алгоритма weasel program, описанная в https://en.wikipedia.org/wiki/Weasel_program
-"""
-
 import random as rand
 import string as strg
 from time import sleep
 
-dummy = "METHINKS IT IS LIKE A WEASEL"
-result = input(f"Enter your sequences of characters({len(dummy)}): ")
-
-e = 0.05
-
 def new_string(count, string):
+
     if int(count) == int(len(dummy)):
-        to_back = string[:(count - 1)] + rand.choice(new)
+        to_back = string[:(count - 1)] + rand.choice(all_characters)
     elif(int(count) == 1):
-        to_back = rand.choice(new) + string[count:]
+        to_back = rand.choice(all_characters) + string[count:]
     else:
-        to_back = string[:(count - 1)] + rand.choice(new) + string[(count):]
+        to_back = string[:(count - 1)] + rand.choice(all_characters) + string[(count):]
 
     return to_back
 
@@ -49,8 +41,6 @@ def count_list(safe_list):
                 temp += 1
         count.append(temp)
 
-    print(count)
-
     func_max = count.index(max(count))
 
     print(f"Number IS: {func_max}, when index is: {count[func_max]}")
@@ -58,37 +48,47 @@ def count_list(safe_list):
     for i in count:
         if i == count[func_max]:
             print(f"MY DUMMY IS: {dummy}")
-            for j in range(100):
+            for _ in range(100):
                 another_list.append(safe_list[int(func_max)])
             break
 
     return another_list
 
+def get_string():
 
-safe_list = []
+    new_line = strg.ascii_letters
 
-new = strg.ascii_letters
+    for i in result:
+        if i not in new_line:
+            new_line = new_line + i
+    
+    return new_line
 
-for i in result:
-    if i not in new:
-        new = new + i
+if __name__ == '__main__':
+    ''' Реализация алгоритма weasel program, описанная в https://en.wikipedia.org/wiki/Weasel_program. '''
 
-for i in range(0, 100):
-    safe_list.append(result)
+    dummy = "METHINKS IT IS LIKE A WEASEL"
+    result = input(f"Enter your sequences of {len(dummy)} characters: ")
+    # result = "irwvcSDamrtvxacxvbqadfSXfplN"
 
+    e = 0.05
 
-itter = 0
+    safe_list = []
 
-while result != dummy:
+    all_characters = get_string()
 
-    itter += 1
-    safe_list = new_list(safe_list)
-    for i in safe_list:
-        print(f"PHRASES: {i}")
-    safe_list = count_list(safe_list)
+    for i in range(0, 100):
+        safe_list.append(result)
 
-    result = safe_list[0]
-    print(f"Иттерация №{itter} имеет результат {result}")
-    sleep(0.5)
+    itter = 0
+    while result != dummy:
 
-print(f"WE GOT SUCCSSESS ON THE PHRASE |{dummy}| on the itteration: {itter}")
+        itter += 1
+        safe_list = new_list(safe_list)
+        safe_list = count_list(safe_list)
+
+        result = safe_list[0]
+        print(f"Иттерация №{itter} имеет результат {result}")
+        sleep(0.5)
+
+    print(f"WE GOT SUCCSSESS ON THE PHRASE |{dummy}| on {itter} itteration")
