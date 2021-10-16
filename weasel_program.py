@@ -43,7 +43,7 @@ def count_list(safe_list):
 
     func_max = count.index(max(count))
 
-    print(f"Number IS: {func_max}, when index is: {count[func_max]}")
+    print(f"Amount of right symbols is: {count[func_max]}")
 
     for i in count:
         if i == count[func_max]:
@@ -56,7 +56,7 @@ def count_list(safe_list):
 
 def get_string():
 
-    new_line = strg.ascii_letters
+    new_line = strg.ascii_letters + ' '
 
     for i in result:
         if i not in new_line:
@@ -88,7 +88,7 @@ if __name__ == '__main__':
         safe_list = count_list(safe_list)
 
         result = safe_list[0]
-        print(f"Иттерация №{itter} имеет результат {result}")
+        print(f"Itteration number {itter} has {result}")
         sleep(0.5)
 
     print(f"WE GOT SUCCSSESS ON THE PHRASE |{dummy}| on {itter} itteration")
