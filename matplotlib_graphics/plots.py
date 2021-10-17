@@ -30,8 +30,8 @@ def paint(t, xrange: float, yrange: float, axes_names, func_name, first_arg, sec
 			for i in range(len(first_arg)):
 				plt.plot(t, func_name(first_arg[i], second_arg[i], third_arg[i], t))
 
-	axes.set_ylim([0.0, yrange])
-	axes.set_xlim([0.0, xrange])
+	axes.set_ylim([0, yrange])
+	axes.set_xlim([0, xrange])
 
 	plt.legend(axes_names, loc = 1)
 	plt.show()
