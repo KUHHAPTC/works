@@ -61,7 +61,7 @@ if __name__ == '__main__':
 	#paint(x, 0.12, 105.0, ('alfa', 'beta'), exp_density, (mu1, mu2, mu3)) 
 
 	# График 3
-	#paint(x, 0.12, 105.0, ('alfa', 'beta'), hyperexp_density, (mu1, mu3), second_arg=(mu2, mu2), third_args=(mu3, mu1)) 
+	#paint(x, 0.12, 105.0, ('alfa', 'beta'), hyperexp_density, (mu1, mu3), second_arg=(mu2, mu2), third_arg=(mu3, mu1)) 
 
 	# График 4
 	#paint(x, 0.12, 73.0, ('mu4'), exp_density, (mu4)) 
