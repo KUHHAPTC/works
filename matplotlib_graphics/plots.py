@@ -58,14 +58,14 @@ if __name__ == '__main__':
 	#paint(x, 0.15, 1.05, ('mu1', 'mu2', 'mu3'), exp_spread, (mu1, mu2, mu3))
 
 	# График 2
-	#paint(x, 0.12, 105.0, ('alfa', 'beta'), exp_density, (mu1, mu2, mu3)) 
+	#paint(x, 0.12, 105, ('alfa', 'beta'), exp_density, (mu1, mu2, mu3)) 
 
 	# График 3
-	#paint(x, 0.12, 105.0, ('alfa', 'beta'), hyperexp_density, (mu1, mu3), second_arg=(mu2, mu2), third_arg=(mu3, mu1)) 
+	#paint(x, 0.12, 105, ('alfa', 'beta'), hyperexp_density, (mu1, mu3), second_arg=(mu2, mu2), third_arg=(mu3, mu1)) 
 
 	# График 4
-	#paint(x, 0.12, 73.0, ('mu4'), exp_density, (mu4)) 
+	#paint(x, 0.12, 73, ('mu4'), exp_density, (mu4)) 
 	
 	# График 5
-	paint(x, 0.33, 28.0, ('mu51', 'mu52', 'mu53'), erlang, (3, 9, 15), second_arg=(mu51, mu52, mu53)) 
+	paint(x, 0.33, 28, ('mu51', 'mu52', 'mu53'), erlang, (3, 9, 15), second_arg=(mu51, mu52, mu53)) 
 
