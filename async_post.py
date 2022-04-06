@@ -57,14 +57,6 @@ async def send_post(i, kwargs):
                        open("12414.png", 'rb'),
                        filename='12414.png',
                        content_type='multipart/form-data')
-        proxy_free = 'http://110.165.23.162:80'
-        proxy_check = 'http://23.239.20.205:80'
-        # proxy = 'http://206.253.164.146:80'
-        # proxy_3 = 'http://107.151.182.247:80' # jaloba na ssl
-        # proxy_2 = 'http://Seldeydarasama00:Z3l6OwW@5.180.154.89:45785'
-        proxy_1 = 'http://Seldeydarasama00:Z3l6OwW@191.101.148.75:45785'
-        # proxy_4 = 'http://yWCAVM2j:1LZThx9T@212.193.142.234:54893' # jaloba na ssl
-        # proxy_5 = 'http://5.42.177.53:3128' # https vidimo
         async with session.post(URL_MAIN, headers=headers, data=data) as resp:
 
             print(f'send post {time.monotonic() - t} ({kwargs["title_ru"]})')
